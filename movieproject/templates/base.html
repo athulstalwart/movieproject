@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+     <body style="background-image:url('{% static 'images/cl.jpg' %}')" ></body>
+
+
+</head>
+<body>
+<!-- Just an image -->
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="{% url 'movieapp:index'  %}">
+    Online Movie Store
+  </a>
+    <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown button
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+</div>
+
+    <a class="btn btn-warning" href="{% url 'movieapp:add_movie'  %}" > addmovie+ </a>
+
+</nav>
+{% block body %}
+{% endblock %}
+
+</body>
+</html>
